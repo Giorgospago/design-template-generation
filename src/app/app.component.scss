@@ -36,19 +36,20 @@
                     li {
                         height: 100%;
                         flex-basis: 4rem;
-                        opacity: 0.5;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         transition: opacity 0.3s ease-in-out;
 
                         &.active {
-                            opacity: 1;
+                            svg {
+                                fill: var(--color-white);
+                            }
                         }
 
                         svg {
                             height: 2.2rem;
-                            fill: white;
+                            fill: rgba(255, 255, 255, 0.5);
                         }
                     }
 
@@ -59,7 +60,7 @@
                         left: 0;
                         height: 5px;
                         border-radius: 20px;
-                        background-color: white;
+                        background-color: var(--color-white);
                     }
                 }
             }

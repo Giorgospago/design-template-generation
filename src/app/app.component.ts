@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewChecked, ChangeDetectionStrategy, Component} from '@angular/core';
 import {Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
@@ -7,9 +7,10 @@ import {NgwWowService} from 'ngx-wow';
 @Component({
     selector: 'app-root',
     templateUrl: 'app.component.html',
-    styleUrls: ['app.component.scss']
+    styleUrls: ['app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewChecked {
 
     public menu = 1;
     public distance = '';
@@ -25,7 +26,7 @@ export class AppComponent implements AfterViewInit {
         this.wow.init();
     }
 
-    ngAfterViewInit() {
+    ngAfterViewChecked() {
         const li = document.querySelector('#menu ul li:first-child');
         this.selectMenu(1, {target: li});
     }
