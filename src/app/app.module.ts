@@ -8,6 +8,7 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 
 import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
+import {NgwWowModule} from 'ngx-wow';
 
 @NgModule({
     declarations: [AppComponent],
@@ -15,6 +16,7 @@ import {CommonModule} from '@angular/common';
     imports: [
         CommonModule,
         BrowserModule,
+        NgwWowModule,
         IonicModule.forRoot()
     ],
     providers: [

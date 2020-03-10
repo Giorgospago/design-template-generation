@@ -1,0 +1,64 @@
+@import "theme/fonts";
+@import "theme/variables";
+@import "~normalize.css/normalize.css";
+@import "~animate.css/animate.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+.text-white {color: var(--color-white);}
+.text-main {color: var(--color-main);}
+.text-first {color: var(--color-first);}
+.text-second {color: var(--color-second);}
+.text-light {color: var(--color-light);}
+
+.bg-white {background-color: var(--color-white);}
+.bg-main {background-color: var(--color-main);}
+.bg-first {background-color: var(--color-first);}
+.bg-second {background-color: var(--color-second);}
+.bg-light {background-color: var(--color-light);}
+
+@for $i from 1 through 5 {
+    .px-#{$i} {
+        padding-left: $i * 1rem;
+        padding-right: $i * 1rem;
+    }
+    .py-#{$i} {
+        padding-top: $i * 1rem;
+        padding-bottom: $i * 1rem;
+    }
+    .pt-#{$i} {padding-top: $i * 1rem;}
+    .pr-#{$i} {padding-right: $i * 1rem;}
+    .pb-#{$i} {padding-bottom: $i * 1rem;}
+    .pl-#{$i} {padding-left: $i * 1rem;}
+
+    .mx-#{$i} {
+        margin-left: $i * 1rem;
+        margin-right: $i * 1rem;
+    }
+    .my-#{$i} {
+        margin-top: $i * 1rem;
+        margin-bottom: $i * 1rem;
+    }
+    .mt-#{$i} {margin-top: $i * 1rem;}
+    .mr-#{$i} {margin-right: $i * 1rem;}
+    .mb-#{$i} {margin-bottom: $i * 1rem;}
+    .ml-#{$i} {margin-left: $i * 1rem;}
+}
+
+@for $i from 1 through 100 {
+    .font-size-#{$i} {
+        font-size: $i * 0.1rem;
+    }
+}
+
+.round-top-left {
+    border-top-left-radius: 4.5rem;
+}
+
+* {
+    font-family: 'Gilroy-Bold';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.font-basic {
+    font-family: 'Gilroy-Bold';
+}
