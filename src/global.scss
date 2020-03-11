@@ -17,6 +17,7 @@
 .bg-light {background-color: var(--color-light);}
 
 @for $i from 1 through 5 {
+    .p-#{$i} {padding: $i * 1rem;}
     .px-#{$i} {
         padding-left: $i * 1rem;
         padding-right: $i * 1rem;
@@ -30,6 +31,7 @@
     .pb-#{$i} {padding-bottom: $i * 1rem;}
     .pl-#{$i} {padding-left: $i * 1rem;}
 
+    .m-#{$i} {margin: $i * 1rem;}
     .mx-#{$i} {
         margin-left: $i * 1rem;
         margin-right: $i * 1rem;
@@ -54,11 +56,13 @@
     border-top-left-radius: 4.5rem;
 }
 
-* {
-    font-family: 'Gilroy-Bold';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.font-basic {
-    font-family: 'Gilroy-Bold';
+.font-basic-bold {font-family: 'Gilroy-Bold';}
+.font-basic-regular {font-family: 'Gilroy-Regular';}
+.font-basic-light {font-family: 'Gilroy-Light';}
+
+
+/* Example for the declarative edition */
+[data-ripplet] {
+    -webkit-tap-highlight-color: transparent; /* 1 */
+    touch-action: manipulation; /* 2 */
 }

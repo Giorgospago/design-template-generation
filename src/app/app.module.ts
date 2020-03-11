@@ -9,6 +9,8 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
 import {NgwWowModule} from 'ngx-wow';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [AppComponent],
@@ -17,7 +19,8 @@ import {NgwWowModule} from 'ngx-wow';
         CommonModule,
         BrowserModule,
         NgwWowModule,
-        IonicModule.forRoot()
+        IonicModule.forRoot(),
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [
         StatusBar,
